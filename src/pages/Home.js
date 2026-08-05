@@ -214,6 +214,60 @@ const Home = ({ isDarkMode }) => {
         </div>
       </section>
 
+      {/* ══ EXPERIENCE ══ */}
+      <section className={`border-t ${border} py-16 px-5`}>
+        <div className="max-w-2xl mx-auto">
+          <p className={`text-[10px] font-mono tracking-widest uppercase mb-8 text-center ${muted}`}>Work Experience</p>
+
+          <div className={`rounded-2xl p-6 sm:p-8 border relative overflow-hidden ${isDarkMode ? 'bg-white/5 border-white/10' : 'bg-black/[0.02] border-black/10'}`}>
+
+            {/* Glow accent */}
+            <div className="absolute top-0 left-0 w-1 h-full bg-blue-500 rounded-l-2xl" />
+
+            <div className="pl-4">
+              {/* Role + company */}
+              <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2 mb-4">
+                <div>
+                  <h3 className={`text-lg font-black ${isDarkMode ? 'text-white' : 'text-black'}`}>Full Stack Developer</h3>
+                  <p className="text-blue-500 font-semibold text-sm">FomOwl</p>
+                </div>
+                <span className={`inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-[10px] font-mono tracking-widest uppercase border self-start sm:self-auto
+                  ${isDarkMode ? 'border-green-500/30 bg-green-500/10 text-green-400' : 'border-green-500/30 bg-green-50 text-green-600'}`}>
+                  <span className="w-1.5 h-1.5 rounded-full bg-green-400 animate-pulse" />
+                  July 2026 — Present
+                </span>
+              </div>
+
+              {/* Responsibilities */}
+              <ul className={`space-y-3 text-sm leading-relaxed ${muted}`}>
+                {[
+                  'Architect and build scalable full stack web applications from database schema to pixel-perfect UI.',
+                  'Design and develop RESTful APIs using Node.js and Express, consumed by React frontends.',
+                  'Manage and optimise MongoDB and SQL databases for performance and reliability.',
+                  'Implement authentication systems, role-based access control, and security best practices.',
+                  'Collaborate with cross-functional teams to ship features on tight deadlines.',
+                  'Write clean, maintainable code with a focus on performance, scalability, and developer experience.',
+                ].map((item) => (
+                  <li key={item} className="flex items-start gap-2.5">
+                    <span className="w-1 h-1 rounded-full bg-blue-500 shrink-0 mt-2" />
+                    {item}
+                  </li>
+                ))}
+              </ul>
+
+              {/* Stack tags */}
+              <div className="flex flex-wrap gap-2 mt-6">
+                {['React', 'Node.js', 'Express', 'MongoDB', 'REST APIs', 'Tailwind CSS', 'Git'].map((tech) => (
+                  <span key={tech} className={`px-3 py-1 rounded-full text-xs font-semibold ${isDarkMode ? 'bg-white/10 text-white/70' : 'bg-black/8 text-black/70'}`}>
+                    {tech}
+                  </span>
+                ))}
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* ══ TESLA / ORIGIN STORY ══ */}
       <section className={`border-t ${border} py-16 px-5`}>
         <div className="max-w-2xl mx-auto">

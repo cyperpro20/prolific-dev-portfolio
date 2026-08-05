@@ -219,13 +219,10 @@ const Home = ({ isDarkMode }) => {
         <div className="max-w-2xl mx-auto">
           <p className={`text-[10px] font-mono tracking-widest uppercase mb-8 text-center ${muted}`}>Work Experience</p>
 
-          <div className={`rounded-2xl p-6 sm:p-8 border relative overflow-hidden ${isDarkMode ? 'bg-white/5 border-white/10' : 'bg-black/[0.02] border-black/10'}`}>
-
-            {/* Glow accent */}
+          {/* FomOwl */}
+          <div className={`rounded-2xl p-6 sm:p-8 border relative overflow-hidden mb-4 ${isDarkMode ? 'bg-white/5 border-white/10' : 'bg-black/[0.02] border-black/10'}`}>
             <div className="absolute top-0 left-0 w-1 h-full bg-blue-500 rounded-l-2xl" />
-
             <div className="pl-4">
-              {/* Role + company */}
               <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2 mb-4">
                 <div>
                   <h3 className={`text-lg font-black ${isDarkMode ? 'text-white' : 'text-black'}`}>Full Stack Developer</h3>
@@ -237,8 +234,6 @@ const Home = ({ isDarkMode }) => {
                   July 2026 — Present
                 </span>
               </div>
-
-              {/* Responsibilities */}
               <ul className={`space-y-3 text-sm leading-relaxed ${muted}`}>
                 {[
                   'Architect and build scalable full stack web applications from database schema to pixel-perfect UI.',
@@ -254,10 +249,48 @@ const Home = ({ isDarkMode }) => {
                   </li>
                 ))}
               </ul>
-
-              {/* Stack tags */}
               <div className="flex flex-wrap gap-2 mt-6">
                 {['React', 'Node.js', 'Express', 'MongoDB', 'REST APIs', 'Tailwind CSS', 'Git'].map((tech) => (
+                  <span key={tech} className={`px-3 py-1 rounded-full text-xs font-semibold ${isDarkMode ? 'bg-white/10 text-white/70' : 'bg-black/8 text-black/70'}`}>
+                    {tech}
+                  </span>
+                ))}
+              </div>
+            </div>
+          </div>
+
+          {/* Codex Inc Enterprise */}
+          <div className={`rounded-2xl p-6 sm:p-8 border relative overflow-hidden ${isDarkMode ? 'bg-white/5 border-white/10' : 'bg-black/[0.02] border-black/10'}`}>
+            <div className="absolute top-0 left-0 w-1 h-full bg-purple-500 rounded-l-2xl" />
+            <div className="pl-4">
+              <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2 mb-4">
+                <div>
+                  <h3 className={`text-lg font-black ${isDarkMode ? 'text-white' : 'text-black'}`}>Tech Lead <span className={`text-sm font-medium ${muted}`}>(Architect)</span></h3>
+                  <p className="text-purple-400 font-semibold text-sm">Codex Inc Enterprise</p>
+                </div>
+                <span className={`inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-[10px] font-mono tracking-widest uppercase border self-start sm:self-auto
+                  ${isDarkMode ? 'border-green-500/30 bg-green-500/10 text-green-400' : 'border-green-500/30 bg-green-50 text-green-600'}`}>
+                  <span className="w-1.5 h-1.5 rounded-full bg-green-400 animate-pulse" />
+                  June 2026 — Present
+                </span>
+              </div>
+              <ul className={`space-y-3 text-sm leading-relaxed ${muted}`}>
+                {[
+                  'Lead the technical vision and architecture of all engineering projects across the organisation.',
+                  'Define system design patterns, tech stack decisions, and development standards for the team.',
+                  'Mentor junior and mid-level developers, conducting code reviews and driving engineering best practices.',
+                  'Oversee full stack development lifecycle — from requirements gathering to production deployment.',
+                  'Bridge the gap between business requirements and technical execution with clear architectural plans.',
+                  'Drive performance optimisation, security hardening, and scalability across all company platforms.',
+                ].map((item) => (
+                  <li key={item} className="flex items-start gap-2.5">
+                    <span className="w-1 h-1 rounded-full bg-purple-500 shrink-0 mt-2" />
+                    {item}
+                  </li>
+                ))}
+              </ul>
+              <div className="flex flex-wrap gap-2 mt-6">
+                {['System Architecture', 'React', 'Node.js', 'MongoDB', 'Team Leadership', 'Code Review', 'DevOps'].map((tech) => (
                   <span key={tech} className={`px-3 py-1 rounded-full text-xs font-semibold ${isDarkMode ? 'bg-white/10 text-white/70' : 'bg-black/8 text-black/70'}`}>
                     {tech}
                   </span>
